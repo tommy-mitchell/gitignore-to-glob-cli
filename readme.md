@@ -27,7 +27,7 @@ pnpm add -g gitignore-to-glob-cli
 
 ## Usage
 
-```sh
+```txt
 $ gitignore-to-glob --help
 
   Usage
