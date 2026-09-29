@@ -1,6 +1,6 @@
 {
 	"name": "gitignore-to-glob-cli",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Converts gitignore patterns into minimatch-style globs.",
 	"license": "MIT",
 	"repository": "tommy-mitchell/gitignore-to-glob-cli",
