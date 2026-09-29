@@ -1,0 +1,56 @@
+{
+	"name": "gitignore-to-minimatch-cli",
+	"version": "0.0.0",
+	"description": "Wrapper for `@humanwhocodes/gitignore-to-minimatch` package.",
+	"license": "MIT",
+	"repository": "tommy-mitchell/gitignore-to-minimatch-cli",
+	"author": "Tommy Mitchell (https://tommymitchell.io)",
+	"type": "module",
+	"bin": {
+		"gitignore-to-minimatch": "./dist/cli.js"
+	},
+	"engines": {
+		"node": "^22.20 || ^24.12 || >=26"
+	},
+	"scripts": {
+		"prepare": "npm run build",
+		"build": "tsc -p tsconfig.build.json && execify --package",
+		"lint": "xo",
+		"format": "dprint fmt && xo --fix",
+		"test": "c8 ava && tsc --noEmit"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"cli",
+		"cli-app",
+		"command-line"
+	],
+	"dependencies": {
+		"@humanwhocodes/gitignore-to-minimatch": "^1.0.2",
+		"find-up-simple": "^1.0.1",
+		"log-symbols": "^7.0.1",
+		"meow": "^14.1.0"
+	},
+	"devDependencies": {
+		"@tommy-mitchell/dprint-config": "^0.8.0",
+		"@tommy-mitchell/eslint-config-xo": "^2.0.0-beta.7",
+		"@tommy-mitchell/tsconfig": "^4.0.0",
+		"@types/node": "24",
+		"async-sema": "^3.1.1",
+		"ava": "^8.0.1",
+		"c8": "^12.0.0",
+		"execa": "^10.0.1",
+		"execify-cli": "^0.1.0",
+		"get-executable-bin-path": "^0.1.0",
+		"typescript": "~6.0.3",
+		"xo": "^5.0.1"
+	},
+	"ava": {
+		"extensions": ["ts"],
+		"environmentVariables": {
+			"concurrency": "5"
+		}
+	}
+}
