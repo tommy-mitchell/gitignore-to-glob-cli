@@ -1,0 +1,16 @@
+*
+/foo
+foo
+*.js
+foo/bar
+!foo?
+./foo.js
+../foo.js
+**/*.js
+# comment
+fixtures
+fixtures/
+
+
+test.js
+!/foo/bar
