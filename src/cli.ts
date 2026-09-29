@@ -8,7 +8,7 @@ import * as helpers from "./helpers.ts";
 // dprint-ignore
 const cli = meow(`
 	Usage
-	  $ gitignore-to-minimatch […]
+	  $ gitignore-to-glob […]
 
 	Options
 	  --input  -i  Path to .gitignore file
@@ -16,13 +16,13 @@ const cli = meow(`
 
 	Examples
 	  Read from .gitignore, searching up
-	  $ gitignore-to-minimatch
+	  $ gitignore-to-glob
 
 	  Read from given file
-	  $ gitignore-to-minimatch -i path/to/.gitignore
+	  $ gitignore-to-glob -i path/to/.gitignore
 
 	  Convert inputs
-	  $ gitignore-to-minimatch "foo" "/*.bar" "baz/"
+	  $ gitignore-to-glob "foo" "/*.bar" "baz/"
 	  **/foo
 	  /*.bar
 	  **/baz/**

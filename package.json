@@ -1,13 +1,13 @@
 {
-	"name": "gitignore-to-minimatch-cli",
+	"name": "gitignore-to-glob-cli",
 	"version": "0.0.0",
-	"description": "Wrapper for `@humanwhocodes/gitignore-to-minimatch` package.",
+	"description": "Converts gitignore patterns into minimatch-style globs.",
 	"license": "MIT",
-	"repository": "tommy-mitchell/gitignore-to-minimatch-cli",
+	"repository": "tommy-mitchell/gitignore-to-glob-cli",
 	"author": "Tommy Mitchell (https://tommymitchell.io)",
 	"type": "module",
 	"bin": {
-		"gitignore-to-minimatch": "./dist/cli.js"
+		"gitignore-to-glob": "./dist/cli.js"
 	},
 	"engines": {
 		"node": "^22.20 || ^24.12 || >=26"
@@ -54,7 +54,9 @@
 		"xo": "^5.0.1"
 	},
 	"ava": {
-		"extensions": ["ts"],
+		"extensions": [
+			"ts"
+		],
 		"environmentVariables": {
 			"concurrency": "5"
 		}

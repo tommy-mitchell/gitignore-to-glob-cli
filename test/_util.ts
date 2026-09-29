@@ -44,7 +44,7 @@ export const $ = execa({ all: true, env: { NO_COLOR: "1" }, reject: false });
 
 /** Copies given fixture to a temporary directory and returns copied path. */
 const withFixture = (name: string) => {
-	const temporaryDir = fs.mkdtempSync(path.join(os.tmpdir(), "gitignore-to-minimatch-cli-"));
+	const temporaryDir = fs.mkdtempSync(path.join(os.tmpdir(), "gitignore-to-glob-cli-"));
 	fixtures.push(temporaryDir);
 
 	const fixture = new URL(`fixtures/${name}`, import.meta.url);

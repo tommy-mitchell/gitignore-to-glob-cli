@@ -1,11 +1,13 @@
-# gitignore-to-minimatch-cli
+# gitignore-to-glob-cli
 
-Wrapper for [`@humanwhocodes/gitignore-to-minimatch`](https://github.com/humanwhocodes/gitignore-to-minimatch) package.
+Converts [gitignore patterns](https://git-scm.com/docs/gitignore#_pattern_format) into [minimatch-style globs](https://isaacs.github.io/minimatch/#features).
+
+Supports reading from (and searching for) `.gitignore` files or converting individual patterns directly.
 
 ## Install
 
 ```sh
-npm install --global gitignore-to-minimatch-cli
+npm install --global gitignore-to-glob-cli
 ```
 
 <details>
@@ -13,11 +15,11 @@ npm install --global gitignore-to-minimatch-cli
 <p>
 
 ```sh
-yarn global add gitignore-to-minimatch-cli
+yarn global add gitignore-to-glob-cli
 ```
 
 ```sh
-pnpm add -g gitignore-to-minimatch-cli
+pnpm add -g gitignore-to-glob-cli
 ```
 
 </p>
@@ -26,24 +28,28 @@ pnpm add -g gitignore-to-minimatch-cli
 ## Usage
 
 ```sh
-$ gitignore-to-minimatch --help
+$ gitignore-to-glob --help
 
   Usage
-    $ gitignore-to-minimatch […]
+    $ gitignore-to-glob […]
 
   Options
     --input  -i  Path to .gitignore file
 
   Examples
     Read from .gitignore, searching up
-    $ gitignore-to-minimatch
+    $ gitignore-to-glob
 
     Read from given file
-    $ gitignore-to-minimatch -i path/to/.gitignore
+    $ gitignore-to-glob -i path/to/.gitignore
 
     Convert inputs
-    $ gitignore-to-minimatch "foo" "/*.bar" "baz/"
+    $ gitignore-to-glob "foo" "/*.bar" "baz/"
     **/foo
     /*.bar
     **/baz/**
 ```
+
+## Related
+
+- [gitignore-to-minimatch](https://github.com/humanwhocodes/gitignore-to-minimatch) - Utility to convert gitignore patterns into minimatch patterns.
