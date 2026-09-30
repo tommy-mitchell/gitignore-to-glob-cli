@@ -7,23 +7,8 @@ Supports reading from (and searching for) `.gitignore` files or converting indiv
 ## Install
 
 ```sh
-npm install --global gitignore-to-glob-cli
+npx gitignore-to-glob-cli
 ```
-
-<details>
-<summary>Other Package Managers</summary>
-<p>
-
-```sh
-yarn global add gitignore-to-glob-cli
-```
-
-```sh
-pnpm add -g gitignore-to-glob-cli
-```
-
-</p>
-</details>
 
 ## Usage
 
