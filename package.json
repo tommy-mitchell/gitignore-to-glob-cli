@@ -10,12 +10,12 @@
 		"gitignore-to-glob": "./dist/cli.js"
 	},
 	"engines": {
-		"node": "^22.20 || ^24.12 || >=26"
+		"node": "^22.22 || ^24.15 || >=26"
 	},
 	"scripts": {
 		"prepare": "npm run build",
-		"build": "tsc -p tsconfig.build.json && execify --package",
-		"lint": "xo",
+		"build": "tsc -p tsconfig.build.json && execify --pkg",
+		"lint": "run-all 'dprint check' xo",
 		"format": "dprint fmt && xo --fix",
 		"test": "c8 ava && tsc --noEmit"
 	},
@@ -37,18 +37,14 @@
 		"meow": "^14.1.0"
 	},
 	"devDependencies": {
-		"@tommy-mitchell/dprint-config": "^0.8.0",
-		"@tommy-mitchell/eslint-config-xo": "^2.0.0-beta.7",
-		"@tommy-mitchell/tsconfig": "^4.0.0",
-		"@types/node": "24",
-		"async-sema": "^3.1.1",
-		"ava": "^8.0.1",
+		"@tommy-mitchell/configs": "^0.3.0",
+		"@tommy-mitchell/test-helpers": "^0.1.1",
+		"@types/node": "^22.20",
+		"ava": "^8.0.2",
 		"c8": "^12.0.0",
-		"dedent": "^1.7.2",
-		"dprint": "^0.57.4",
-		"execa": "^10.0.1",
-		"execify-cli": "^0.1.0",
-		"get-executable-bin-path": "^1.0.0",
+		"dprint": "^0.63.0",
+		"execify-cli": "^1.0.0",
+		"run-all-cli": "^0.1.0",
 		"type-fest": "^5.10.0",
 		"typescript": "~6.0.3",
 		"xo": "^5.0.1"

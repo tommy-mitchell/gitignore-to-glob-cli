@@ -5,15 +5,7 @@ import { gitignoreToMinimatch } from "@humanwhocodes/gitignore-to-minimatch";
 export async function readGitignore(path: string): Promise<string | undefined> {
 	try {
 		const stats = await fs.stat(path);
-		if (!stats.isFile()) {
-			return undefined;
-		}
-	} catch {
-		return undefined;
-	}
-
-	try {
-		return await fs.readFile(path, "utf8");
+		return stats.isFile() ? (await fs.readFile(path, "utf8")) : undefined;
 	} catch {
 		return undefined;
 	}

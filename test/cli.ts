@@ -1,9 +1,9 @@
-import dedent from "dedent";
-import { $, test, verifyCli } from "./_util.ts";
+import { $$, dedent } from "@tommy-mitchell/test-helpers";
+import { test, verifyCli } from "./_util.ts";
 
 for (const flag of ["--help", "-h"]) {
 	test(`shows help (${flag})`, async t => {
-		const { all: helpText } = await $`${t.context.binPath} ${flag}`;
+		const { all: helpText } = await $$`${t.context.binPath} ${flag}`;
 		t.snapshot(helpText);
 	});
 }
